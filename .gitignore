@@ -1,0 +1,60 @@
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+.history/
+
+# --- Node / NestJS ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.npm/
+.eslintcache
+*.tsbuildinfo
+
+# Build outputs
+dist/
+build/
+.tmp/
+temp/
+tmp/
+.cache/
+
+# Coverage / reports
+coverage/
+.nyc_output/
+reports/
+junit.xml
+
+# --- Env files (commit only examples) ---
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# If you keep envs per service:
+billing-service/.env
+billing-service/.env.*
+!billing-service/.env.example
+
+payment-gateway/.env
+payment-gateway/.env.*
+!payment-gateway/.env.example
+
+# --- Docker ---
+# Local data volumes (if you mount any host dirs; rename as needed)
+postgres-data/
+billing-service/postgres-data/
+payment-gateway/postgres-data/
+
+# Docker build artifacts
+*.pid
+*.seed
+*.log
+

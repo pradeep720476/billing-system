@@ -1,0 +1,16 @@
+# Node modules (never copy host's!)
+node_modules
+dist
+
+# Build logs and temporary files
+npm-debug.log
+yarn-error.log
+
+# Editor/project settings
+.vscode
+.idea
+.DS_Store
+
+# Environment files (optional for secrets)
+.env
+.env.*

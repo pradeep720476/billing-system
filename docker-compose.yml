@@ -1,0 +1,41 @@
+services:
+  billing-service:
+    build: ./billing-service
+    container_name: billing-service
+    ports:
+      - "3002:3002"
+    env_file:
+      - ./billing-service/.env.docker
+    environment:
+      - NODE_ENV=docker
+      - RUN_SEED=true
+    depends_on:
+      - billing-db
+
+  payment-gateway-service:
+    build: ./payment-gateway
+    container_name: payment-gateway
+    ports:
+      - "3001:3001"
+    env_file:
+      - ./payment-gateway/.env.docker
+    environment:
+      - NODE_ENV=docker
+    depends_on:
+      - gateway-db
+
+  billing-db:
+    image: postgres:15
+    container_name: billing-db
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./billing-service/.env.db
+
+  gateway-db:
+    image: postgres:15
+    container_name: gateway-db
+    ports:
+      - "5433:5432"
+    env_file:
+      - ./payment-gateway/.env.db
