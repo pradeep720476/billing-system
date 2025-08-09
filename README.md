@@ -24,7 +24,7 @@ Client → Billing API → Payment Gateway → (Webhook + X-Signature) → Billi
 ### **Steps**
 
 ```bash
-git clone <>
+git clone https://github.com/pradeep720476/billing-system.git
 cd billing-system
 docker compose up --build
 ```
