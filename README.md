@@ -161,7 +161,6 @@ http://localhost:3002/billing/v1/subscriptions/<uuid>/cancel
 **Trade-offs:**
 
 - **No broker; webhooks over HTTP for simplicity.**
-- **Minimal RBAC to focus on core subscription logic.**
 - **HMAC Signature**(x-signature) validation of authentication between billing service and gateway service\*\*
 - **JWT Authentication** Client to Service API
 - **API KEY** for gateway authentication
